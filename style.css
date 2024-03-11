@@ -55,7 +55,7 @@ header a{
     transition: .2s;
 }
 
-header a:hover{
+header nav.menu-desktop a:hover{
     color: white;
     transform: scale(1.05);
 }
@@ -64,7 +64,7 @@ header nav ul{
     list-style-type: none;
 }
 
-header nav ul li{
+header nav.menu-desktop ul li{
     display: inline-block;
     padding: 0 40px;
 }
@@ -73,6 +73,12 @@ header nav ul li{
     box-shadow:0px 0px 8px rgb(68, 173, 129);
     transform: scale(1.05);
     transition: .2s;
+}
+
+/* BOTÃO LATERAL COM OPÇÊS DA VERSÃO MOBILE*/
+
+.menu-mobile{
+    display: none;
 }
 
 /* ESTILO DO TOPO DO SITE */
@@ -102,6 +108,10 @@ section.topo-do-site .flex{
     margin: 40px 0px;
 }
 
+.txt-topo-site{
+    margin-top: 150px;
+}
+
 #vanta {
     z-index: -1;
     position: absolute;
@@ -123,6 +133,7 @@ section.topo-do-site .flex{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 600px;
 }
 .card-flip {
   position: relative;
@@ -253,4 +264,103 @@ section.topo-do-site .flex{
    width: 50%;
    background-color: #2afc00;
    animation: progress-animation 1s;
+}
+
+@media screen and (max-width: 1171px){
+    /* Classes Gerais */
+
+    .txt-topo-site{
+        margin-top: 0%;
+    }
+
+    main{
+        background-color: #24143c;
+    }
+
+    /* Cabeçalho */
+
+    .menu-desktop, .btn-contato{
+        display: none;
+    }
+
+    /* Corpo do Site */
+
+    .centraliza-card{
+        margin-top: 100px;
+        align-items: center;
+    }
+
+    .card-flip{
+        position: relative;
+        display: inline-block;
+        margin: 80px;
+        max-width: 300px;
+    }
+
+    #vanta {
+        margin-left: 30px;
+        margin-top: 1000;
+    }
+
+    /* BOTÃO LATERAL COM OPÇÊS DA VERSÃO MOBILE*/
+
+    .btn-abrir-menu{
+        display: block;
+    }
+
+    .menu-mobile{
+        background-color: #150c22;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 99999;
+        width: 0%;
+        overflow: hidden;
+    }
+
+    .menu-mobile.abrir-menu{
+        width: 70%;
+    }
+
+    .menu-mobile .btn-fechar i{
+        color: rgb(68, 173, 129);
+        font-size: 30px;
+    }
+
+    .menu-mobile .btn-fechar{
+        padding: 20px 5%;
+    }
+
+    .menu-mobile nav ul{
+        text-align: right;
+    }
+
+    .menu-mobile nav ul li a{
+        color: white;
+        font-size: 20px;
+        font-weight: 300;
+        padding: 20px 8%;
+        display: block;
+    }
+
+    .menu-mobile nav ul li a:hover{
+        background-color: rgb(68, 173, 129);
+    }
+
+    .btn-abrir-menu i{
+        color: rgb(68, 173, 129);
+        font-size: 40px;
+    }
+
+    .overlay-menu{
+        background-color: rgba(0, 0, 0, 0.466);
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 888;
+        display: none;
+    }
 }
