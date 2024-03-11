@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"
+    />
+    <!-- FIM GOOGLE FONTS -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <link rel="shortcut icon" type="image/jpg" href="favicon.ico.png" />
+    <title>Portifólio</title>
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        VANTA.NET({
+          el: "#vanta",
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.00,
+          minWidth: 200.00,
+          scale: 1.00,
+          scaleMobile: 1.00,
+          color: 0xffffff,
+          points: 3.00,
+          maxDistance: 23.00,
+          spacing: 16.00
+        })
+  
+    setTimeout(() => {
+      const main = document.querySelector('main')
+      main.style.opacity = 1
+      main.style.filter = 'blur(0px)'
+      },300)
+      })
+      </script>
+  </head>
+  <body>
+      <div id="vanta"></div>
+    <header>
+      <div class="interface">
+        <div class="logo">
+          <a href="a">
+            <img src="/imagens/J.png" alt="Logo do Portifólio;" style="width: 60px" />
+          </a>
+        </div> <!--Logo-->
+
+        <nav class="menu-desktop">
+          <ul>
+            <li><a href="a">inicio </a></li>
+            <li><a href="a">Habilidades</a></li>
+            <li><a href="a">Sobre</a></li>
+            <li><a href="a">Certificações</a></li>
+          </ul>
+        </nav>
+        <div class="btn-contato">
+          <a href="a">
+            <button>Contato</button>
+          </a>
+        </div>
+        <!--btn-contato-->
+      </div>
+      <!--interface-->
+    </header>
+
+    <main>
+      <section class="topo-do-site">
+        <div class="interface">
+          <div class="flex">
+            <div class="txt-topo-site" style="margin-top: 150px">
+              <h1>
+                OLÁ, EU SOU O JOÃO, MAS VOCÊ PODE ME CHAMAR DE JHONNY<span
+                  >!</span>
+              </h1>
+              <p>
+                Sou um estudante comprometido de Análise e Desenvolvimento de
+                Sistemas, apaixonado por transformar conceitos em soluções
+                práticas. Com habilidades em programação, análise de dados e
+                resolução de problemas, busco uma oportunidade de estágio para
+                aplicar e expandir meu conhecimento em um ambiente profissional.
+                Sou proativo, colaborativo e estou sempre disposto a aprender e
+                crescer junto com a equipe. Estou animado para contribuir de
+                forma significativa para projetos desafiadores, enquanto adquiro
+                experiência prática e desenvolvo habilidades essenciais para
+                minha carreira em tecnologia da informação.
+              </p>
+
+              <p></p>
+
+              <div class="btn-contato">
+                <a href="#">
+                  <button>Entre em contato</button>
+                </a>
+              </div>
+            </div> <!-- txt-topo-site -->
+          </div> <!-- flex -->
+        </div> <!-- interface -->
+
+        <div class="centraliza-card" style="margin-left: 70px; margin-top: 600px;">
+    
+          <div class="card-flip">
+              
+              <div class="front">
+                <img src="/imagens/html-5.png" alt="" style="height: 80px; width: 90px; margin-left: 22px;">
+                 <h1 class="text-shadow">Html</hi>
+              </div>
+              <div class="back">
+                 <h2>Html</h2>
+                 <div class="progresshtml">
+                  <div class="progress-bar"></div>
+                 </div>
+              </div>
+            </div>
+
+          <div class="card-flip">
+              
+              <div class="front">
+                <img src="/imagens/css-3.png" alt="" style="height: 80px; width: 90px; margin-left: 22px;">
+                  <h1 class="text-shadow">CSS</hi>
+              </div>
+              
+              <div class="back">
+                 <h2>Css</h2>
+                 <div class="progresscss">
+                    <div class="progress-bar"></div>
+                </div>
+              </div>
+          </div>
+
+          <div class="card-flip">
+              
+            <div class="front">
+              <img src="/imagens/script-java.png" alt="" style="height: 80px; width: 90px; margin-left: 22px;">
+                <h1 class="text-shadow">JS</hi>
+            </div>
+            
+            <div class="back">
+               <h2>Js</h2>
+               <div class="progressjs">
+                <div class="progress-bar"></div>
+              </div>
+            </div>
+      </div><!--Centraliza Card-->
+      <div class="card-flip">
+              
+        <div class="front">
+          <img src="/imagens/do-sustenido.png" alt="" style="height: 80px; width: 80px; margin-left: 28px;">
+           <h1 class="text-shadow">C#</hi>
+        </div>
+        <div class="back">
+           <h2>C#</h2>
+           <div class="progresscsharp">
+            <div class="progress-bar"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-flip">
+              
+        <div class="front">
+          <img src="/imagens/base-de-dados.png" alt="" style="height: 80px; width: 90px; margin-left: 22px;">
+           <h1 class="text-shadow">MYSQL</hi>
+        </div>
+        <div class="back">
+           <h2>Mysql</h2>
+           <div class="progressmysql">
+            <div class="progress-bar"></div>
+          </div>
+        </div>
+      </div>
+      <div class="card-flip"></div>
+
+      </section> <!-- topo-do-site -->
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
