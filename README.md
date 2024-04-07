@@ -1,4 +1,4 @@
-<h1 align="center"> NLW - Unite</h1>
+<h1 align="center">Sobre Mim</h1>
 
 <p align="center">
 Projeto em desenvolvimento que visa me apresentar melhor como Dev
