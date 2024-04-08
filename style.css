@@ -11,7 +11,7 @@
 body { 
     background-size: cover;
     height: 100%;
-    background-color: #24143c;
+    background-color: black;
     overflow-x: hidden;
 }
   
@@ -29,7 +29,7 @@ body {
     padding: 10px 40px;
     font-size: 18px;
     font-weight: 600;
-    border-color: rgb(68, 173, 129);
+    border-color: #ad44a1;
     border-radius: 30px;
     cursor: pointer;
     background-color: transparent;
@@ -70,9 +70,15 @@ header nav.menu-desktop ul li{
 }
 
 .btn-contato button:hover{
-    box-shadow:0px 0px 8px rgb(68, 173, 129);
+    box-shadow:0px 0px 8px #ad44a1;
     transform: scale(1.05);
     transition: .2s;
+}
+
+h1{
+    color: #ad44a1;
+    font-size: 80px;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* BOTÃO LATERAL COM OPÇÊS DA VERSÃO MOBILE*/
@@ -100,7 +106,7 @@ section.topo-do-site .flex{
 }
 
 .topo-do-site .txt-topo-site span{
-    color: rgb(68, 173, 129);
+    color: #ad44a1;
 }
 
 .topo-do-site .txt-topo-site p{
@@ -123,6 +129,14 @@ section.topo-do-site .flex{
     height: 200%;
     margin-left: 500px;
   }
+
+.sobre{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 200px;
+}
 
   /* CARDS */
 
@@ -176,7 +190,7 @@ section.topo-do-site .flex{
 .card-flip > .front,
 .card-flip > .back {
   display: block;
-  color: rgb(68, 173, 129);
+  color: #ad44a1;
   width: 200px;
   background-size: cover !important;
   background-position: center !important;

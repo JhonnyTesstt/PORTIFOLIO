@@ -10,10 +10,11 @@ window.addEventListener('DOMContentLoaded', () => {
       minWidth: 200.00,
       scale: 1.00,
       scaleMobile: 1.00,
-      color: 0x3fffbb,
-      points: 3.00,
-      maxDistance: 23.00,
-      spacing: 16.00
+      color: 0xa828b6,
+      backgroundColor: 0x0,
+      points: 5.00,
+      maxDistance: 22.00,
+      spacing: 11.00
     })
 
 setTimeout(() => {
@@ -32,4 +33,14 @@ let menu = documente.getElementById('menu-mobile')
 btnMenu.addEventListener('click', ()=>{
     menu.classList.add('abrir-menu')
 })
+
+$('.nav a[href^="#"]').on('click', function(e) {
+	e.preventDefault();
+	var id = $(this).attr('href'),
+			targetOffset = $(id).offset().top;
+			
+	$('html, body').animate({ 
+		scrollTop: targetOffset - 100
+	}, 500);
+});
 
