@@ -15,4 +15,4 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-- [Acesse o projeto finalizado, online](https://jhonnytesstt.github.io/PORTIFOLIO/).
+- [Acesse o projeto finalizado, online](https://github.com/JhonnyTesstt/PORTIFOLIO.git).
