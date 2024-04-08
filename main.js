@@ -33,14 +33,3 @@ let menu = documente.getElementById('menu-mobile')
 btnMenu.addEventListener('click', ()=>{
     menu.classList.add('abrir-menu')
 })
-
-$('.nav a[href^="#"]').on('click', function(e) {
-	e.preventDefault();
-	var id = $(this).attr('href'),
-			targetOffset = $(id).offset().top;
-			
-	$('html, body').animate({ 
-		scrollTop: targetOffset - 100
-	}, 500);
-});
-
