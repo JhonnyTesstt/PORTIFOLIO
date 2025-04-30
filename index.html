@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Consolidated Stylesheet (to be created in CSS refactoring step) -->
+    <link rel="stylesheet" href="src/styles/styles.css">
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    
+    <title>Portfólio | João Victor</title>
+</head>
+<body>
+
+
+    <header>
+        <nav id="navbar">
+            <a href="#home" class="nav-logo-link" aria-label="Página inicial">
+                <i class="fa-regular fa-address-card" id="nav_logo" aria-hidden="true"></i>
+            </a>
+            <ul id="nav_list" class="nav-menu">
+                <li class="nav-item"><a href="#home">Home</a></li>
+                <li class="nav-item"><a href="#certificados">Certificados</a></li>
+                <li class="nav-item"><a href="#projetos">Projetos</a></li>
+                <li class="nav-item"><a href="#sobre">Sobre</a></li>
+                <li class="nav-item"><a href="#contato">Contato</a></li>
+            </ul>
+            
+            <button id="mobile_btn" aria-label="Abrir menu mobile" aria-expanded="false" aria-controls="mobile_menu">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+        </nav>
+
+        <div id="mobile_menu" class="mobile-menu" role="dialog" aria-modal="true" aria-labelledby="mobile-menu-title" hidden>
+             <h2 id="mobile-menu-title" class="visually-hidden">Menu Principal</h2>
+             <button id="mobile_close_btn" aria-label="Fechar menu mobile">
+                 <i class="fa-solid fa-times" aria-hidden="true"></i>
+             </button>
+            <ul id="mobile_nav_list">
+                <li class="nav-item"><a href="#home">Home</a></li>
+                <li class="nav-item"><a href="#certificados">Certificados</a></li>
+                <li class="nav-item"><a href="#projetos">Projetos</a></li>
+                <li class="nav-item"><a href="#sobre">Sobre</a></li>
+                <li class="nav-item"><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main id="content">
+
+
+        <section id="home" class="home-section scroll-reveal">
+            <div class="home-content">
+                <h1 class="title">
+                    Olá, eu sou o 
+                    <span>João Victor!</span>
+                </h1>
+
+                <p class="description">
+                    Gosto de criar coisas e resolver problemas.
+                </p>
+
+                <div class="social-media-buttons">
+                    <a href="https://wa.me/5511981078786?text=Ol%C3%A1%20Jo%C3%A3o,%20vim%20atrav%C3%A9s%20de%20seu%20portif%C3%B3lio!" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp">
+                        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/jo%C3%A3o-victor-de-oliveira-63a883143/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://github.com/JhonnyTesstt" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <a href="src/cv/CV João Victor 2025.pdf" download="CV_Joao_Victor.pdf" class="btn-default">
+                    Baixar CV
+                </a>
+            </div>
+
+            <div class="home-banner">
+                <img src="src/images/eu.jpeg" alt="Foto de João Victor">
+            </div>
+        </section>
+
+
+        <section id="certificados" class="certificates-section scroll-reveal">
+            <h2 class="section-title">Certificados</h2>
+            <div class="certificates-grid">
+                <article class="certificate-card">
+                    <h3>Certificado de C#</h3>
+                    <p>Rockeseat</p>
+                </article>
+                <article class="certificate-card">
+                    <h3>Certificado de Fullstack</h3>
+                    <p>Rockeseat</p>
+                </article>
+                <article class="certificate-card">
+                    <h3>Certificado de Java</h3>
+                    <p>Rockeseat</p>
+                </article>
+                <article class="certificate-card">
+                    <h3>Certificado de Python</h3>
+                    <p>Pythonando</p>
+                </article>
+                <article class="certificate-card">
+                    <h3>Certificado de User Experience</h3>
+                    <p>FIAP</p>
+                </article>
+                <article class="certificate-card">
+                    <h3>Certificado de HTML, CSS e JavaScript</h3>
+                    <p>Fundação Bradesco</p>
+                </article>
+                <article class="certificate-card">
+                    <h3>Certificado de Implementando um Banco de Dados</h3>
+                    <p>Fundação Bradesco</p>
+                </article>
+                <article class="certificate-card">
+                    <h3>Certificado de Modelagem de Dados</h3>
+                    <p>Fundação Bradesco</p>
+                </article>
+                <article class="certificate-card">
+                    <h3>Certificado de IA Generativa</h3>
+                    <p>MIT</p>
+                </article>
+                <article class="certificate-card">
+                    <h3>Certificado de React</h3>
+                    <p>Rocketseat</p>
+                </article>
+            </div>
+
+            <div class="technical-info scroll-reveal">
+                <h3>Técnico em Desenvolvimento de Sistemas</h3>
+                <p>
+                    Formado pela ETEC (2020-2022), adquiri habilidades práticas em programação, análise de sistemas, banco de dados e desenvolvimento de software. Tenho experiência em diversas linguagens e ferramentas, buscando sempre aprimorar meus conhecimentos na área de tecnologia.
+                </p>
+            </div>
+
+            <div class="technical-info scroll-reveal">
+                <h3>Superior em Análise e Desenvolvimento de Sistemas</h3>
+                <p>
+                    Formado na Universidade Cruzeiro do Sul (2023-2025), estou aprofundando meus conhecimentos em desenvolvimento de software, arquitetura de sistemas e metodologias ágeis. Estou sempre em busca de novos desafios e aprendizados para me tornar um profissional completo na área de tecnologia.
+                </p>
+            </div>
+        </section>
+
+
+        <section id="projetos" class="efeito-txt">
+            <fieldset id="fieldset">
+                <label style="--_img: url(https://assets.codepen.io/2585/fiddle-leaf.jpeg)">
+                    <input type="radio" name="images" value="Fiddle Leaf">
+                </label>
+                <label style="--_img: url(https://assets.codepen.io/2585/pink-princess.jpeg)">
+                    <input type="radio" name="images" value="Pink Princess">
+                </label>
+                <label style="--_img: url(https://assets.codepen.io/2585/kara-eads-zcVArTF8Frs-unsplash.jpg)">
+                    <input type="radio" name="images" value="Monstera" checked>
+                </label>
+                <label style="--_img: url(https://assets.codepen.io/2585/pothos.jpeg)">
+                    <input type="radio" name="images" value="Pothos">
+                </label>
+                <label style="--_img: url(https://assets.codepen.io/2585/rubber-tree.webp)">
+                    <input type="radio" name="images" value="Rubber Tree">
+                </label>
+            </fieldset>
+        </section>
+
+
+        <section id="sobre" class="about-section scroll-reveal">
+            <h2 class="section-title">Sobre Mim</h2>
+            <div class="timeline">
+                <div class="timeline-event">
+                    <div class="timeline-content">
+                        <h3>Informações Pessoais</h3>
+                        <p>20 anos | 13/07/2004 | São Paulo, Brasil</p>
+                    </div>
+                </div>
+                <div class="timeline-event">
+                    <div class="timeline-content">
+                        <h3>Formação Acadêmica</h3>
+                        <p>Ensino Médio Técnico em Desenvolvimento de Sistemas | ETEC Dr. Celso Giglio (2020 - 2022)</p>
+                        <p>Superior em Análise e Desenvolvimento de Sistemas | Universidade Cruzeiro do Sul - UNICSUL (2023 - 2025)</p>
+                    </div>
+                </div>
+                <div class="timeline-event">
+                    <div class="timeline-content">
+                        <h3>Experiência Militar</h3>
+                        <p>Aspirante a Oficial R2 | Exército Brasileiro (01/2023 - 12/2023)</p>
+                    </div>
+                </div>
+                <div class="timeline-event">
+                    <div class="timeline-content">
+                        <h3>Experiência na Área de TI</h3>
+                        <p>Desenvolvedor de Software | Fóton Informática (06/2024 - 6/2025)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="contato">
+            <section class="caixa__formulario efeito-txt">
+                <div class="caixa__contato">
+                    <h2>Entre em Contato</h2>
+                    <form>
+                        <div class="caixa__contato-input">
+                            <input type="text" required />
+                            <label>E-mail</label>
+                        </div>
+                        <div class="caixa__contato-input">
+                            <input required />
+                            <label>Escreva sua mensagem.</label>
+                        </div>
+                        <a>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Enviar
+                        </a>
+                    </form>
+                </div>
+            </section>
+            <div class="social-media-buttons-contato efeito-txt">
+                <a href="https://wa.me/5511981078786?text=Ol%C3%A1%20Jo%C3%A3o,%20vim%20atrav%C3%A9s%20de%20seu%20portif%C3%B3lio!">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/jo%C3%A3o-victor-de-oliveira-63a883143/">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/JhonnyTesstt">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 João Victor. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="src/js/script.js" defer></script>
+</body>
+</html>
+

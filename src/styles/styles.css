@@ -1,0 +1,1157 @@
+/* Base Styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+    --primary-color: #df2424;
+    --background-color: #000000;
+    --text-color: #ffffff;
+    --secondary-text-color: #cccccc;
+    --card-background: rgba(20, 20, 20, 0.8);
+    --border-color: #333333;
+    --box-shadow-color: rgba(223, 36, 36, 0.5);
+    --hover-shadow-color: rgba(222, 8, 8, 0.6);
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px; /* Base font size for rem units */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+section {
+    padding: 4rem 8%; /* Use rem for padding */
+    min-height: 80vh; /* Ensure sections have some minimum height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically by default */
+}
+
+h1, h2, h3 {
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+h2.section-title {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary-text-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Utility Classes */
+.visually-hidden {
+    position: absolute !important;
+    height: 1px; 
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+.btn-default, .btn-submit {
+    border: none;
+    display: inline-flex; /* Use inline-flex for better alignment */
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border-radius: 8px; /* Slightly smaller radius */
+    padding: 0.75rem 1.5rem; /* Use rem */
+    font-weight: 600;
+    box-shadow: 0px 4px 10px 2px rgba(118, 21, 21, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none; /* Ensure links styled as buttons don"t have underlines */
+}
+
+.btn-default:hover, .btn-submit:hover {
+    background-color: #b31e1e; /* Darker shade on hover */
+    box-shadow: 0px 6px 15px 4px var(--hover-shadow-color);
+}
+
+.social-media-buttons {
+    display: flex;
+    gap: 1rem; /* Use rem */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.social-media-buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 40px;
+    background-color: #fff;
+    font-size: 1.25rem;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #1d1d1d;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.social-media-buttons a:hover {
+    box-shadow: 0px 0px 12px 8px var(--hover-shadow-color);
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Scroll Reveal Base (elements start hidden) */
+.scroll-reveal {
+    visibility: hidden;
+}
+
+
+
+
+/* Header Styles */
+header {
+    width: 100%;
+    padding: 1.5rem 8%; /* Use rem */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8); /* Slightly transparent background */
+    backdrop-filter: blur(5px); /* Add blur effect */
+    transition: background-color 0.3s ease;
+}
+
+#navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo-link {
+    display: inline-block; /* Ensure link takes up space */
+}
+
+#nav_logo {
+    font-size: 2rem; /* Adjust size as needed */
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+#nav_logo:hover {
+    color: var(--primary-color);
+}
+
+#nav_list {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem; /* Use rem */
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500; /* Slightly lighter weight */
+    position: relative;
+    padding-bottom: 0.3rem;
+}
+
+/* Underline effect on hover */
+.nav-item a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-item a:hover::after {
+    width: 100%;
+}
+
+.nav-item a:hover {
+    color: var(--primary-color); /* Change color on hover */
+}
+
+/* Mobile Menu Styles */
+#mobile_btn {
+    display: none; /* Hidden by default */
+    border: none;
+    background-color: transparent;
+    font-size: 1.75rem;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+#mobile_menu {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70%; /* Adjust width as needed */
+    max-width: 300px;
+    height: 100vh;
+    background-color: rgba(10, 10, 10, 0.95); /* Darker, slightly transparent */
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 2rem 2rem; /* Add padding */
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+}
+
+#mobile_menu.active {
+    display: flex;
+    transform: translateX(0);
+}
+
+#mobile_close_btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    border: none;
+    background: none;
+    color: var(--text-color);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#mobile_nav_list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Use rem */
+    width: 100%;
+    text-align: center;
+}
+
+#mobile_nav_list .nav-item a {
+    font-size: 1.2rem;
+    display: block; /* Make links take full width */
+    padding: 0.5rem 0;
+}
+
+
+
+
+/* Home Section Styles */
+.home-section {
+    display: flex;
+    flex-direction: row; /* Default layout */
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    min-height: 100vh; /* Ensure it takes full viewport height */
+    padding-top: 8rem; /* Adjust padding considering fixed header */
+}
+
+.home-content {
+    flex: 1; /* Take available space */
+    max-width: 600px; /* Limit width for larger screens */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Space between elements */
+}
+
+.home-content .title {
+    font-size: 3.5rem; /* Adjust size */
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.home-content .title span {
+    color: var(--primary-color);
+}
+
+.home-content .description {
+    font-size: 1.1rem;
+    color: var(--secondary-text-color);
+}
+
+.home-banner {
+    flex: 1; /* Take available space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px; /* Limit banner size */
+}
+
+.home-banner img {
+    border-radius: 50%; /* Circular image */
+    width: 100%;
+    max-width: 400px; /* Max image size */
+    height: auto;
+    border: 5px solid var(--primary-color); /* Add a border */
+    box-shadow: 0 0 20px var(--box-shadow-color);
+}
+
+
+
+
+/* Certificates Section Styles */
+.certificates-section {
+    background-color: #0a0a0a; /* Slightly different background for contrast */
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.certificate-card {
+    background-color: var(--card-background);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.certificate-card h3 {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.certificate-card p {
+    font-size: 0.95rem;
+    color: var(--secondary-text-color);
+}
+
+.technical-info {
+    background-color: var(--card-background);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 2rem; /* Space from the grid */
+    text-align: center;
+}
+
+.technical-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.technical-info p {
+    color: var(--secondary-text-color);
+    max-width: 700px; /* Limit width for readability */
+    margin: 0 auto; /* Center the paragraph */
+}
+
+
+
+
+/* Projects Section Styles */
+/* Using open-props for the gallery effect as in the original */
+@media (prefers-reduced-motion: no-preference) {
+    #projetos fieldset > label {
+        background-image: var(--_img);
+        background-size: auto 125%;
+        background-position: center;
+        border-radius: 8px; /* Adiciona bordas arredondadas */
+        overflow: hidden; /* Garante que o conteúdo respeite o arredondamento */
+        margin: 0.5rem; /* Adiciona espaçamento entre os projetos */
+        transition: all 0.5s ease; /* Adiciona uma transição suave */
+    }
+}
+
+#projetos fieldset:has(label:nth-child(1) > input:checked) {
+    --col-1: 5fr;
+    --col-2: 3fr;
+}
+
+#projetos fieldset:has(label:nth-child(2) > input:checked) {
+    --col-1: 2fr;
+    --col-2: 5fr;
+    --col-3: 2fr;
+}
+
+#projetos fieldset:has(label:nth-child(3) > input:checked) {
+    --col-2: 2fr;
+    --col-3: 5fr;
+    --col-4: 2fr;
+}
+
+#projetos fieldset:has(label:nth-child(4) > input:checked) {
+    --col-3: 2fr;
+    --col-4: 5fr;
+    --col-5: 2fr;
+}
+
+#projetos fieldset:has(label:nth-child(5) > input:checked) {
+    --col-4: 3fr;
+    --col-5: 5fr;
+}
+
+  #projetos fieldset > label {
+    background-image: var(--_img);
+
+    background-size: auto 125%;
+  }
+
+
+
+
+/* About Section Styles (Timeline) */
+.about-section {
+    /* Styles for the section container */
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px; /* Limit width */
+    margin: 3rem auto; /* Center timeline */
+    padding: 2rem 0;
+    padding-left: 2rem; /* Space for the line */
+    border-left: 3px solid var(--primary-color);
+}
+
+.timeline-event {
+    position: relative;
+    margin-bottom: 2.5rem; /* Space between events */
+}
+
+.timeline-event:last-child {
+    margin-bottom: 0;
+}
+
+/* Timeline circle marker */
+.timeline-event::before {
+    content: "";
+    position: absolute;
+    left: -2rem; /* Align with padding-left */
+    top: 0.5rem; /* Adjust vertical position */
+    transform: translateX(-50%); /* Center the circle on the line */
+    width: 18px;
+    height: 18px;
+    background: var(--background-color);
+    border: 3px solid var(--primary-color);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-content {
+    background-color: var(--card-background);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.timeline-content h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+    font-size: 1rem;
+    color: var(--secondary-text-color);
+    margin-bottom: 0.5rem; /* Space between paragraphs */
+}
+
+.timeline-content p:last-child {
+    margin-bottom: 0;
+}
+
+
+
+
+/* Contact Section Styles */
+.contact-section {
+    display: flex;
+    flex-direction: column; /* Stack form and social links vertically */
+    align-items: center;
+    gap: 3rem;
+}
+
+.contact-form-container {
+    background-color: var(--card-background);
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 600px; /* Limit form width */
+}
+
+.contact-form-container .section-title {
+    margin-bottom: 2rem; /* Adjust spacing */
+    text-align: center;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group label {
+    position: absolute;
+    top: 0.75rem; /* Adjust initial position */
+    left: 0.5rem;
+    padding: 0 0.25rem;
+    font-size: 1rem;
+    color: var(--secondary-text-color);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    background-color: var(--card-background); /* Match background to cover line */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    outline: none;
+    background: transparent;
+    transition: border-color 0.3s ease;
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resize */
+    min-height: 100px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+}
+
+/* Floating label effect */
+.form-group input:focus ~ label,
+.form-group textarea:focus ~ label,
+.form-group input:valid ~ label,
+.form-group textarea:valid ~ label {
+    top: -0.75rem; /* Move label up */
+    left: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--primary-color);
+}
+
+.btn-submit {
+    align-self: center; /* Center button */
+    /* Inherits styles from .btn-default */
+}
+
+.contact-social-media {
+    text-align: center;
+}
+
+.contact-social-media .social-media-buttons {
+    justify-content: center; /* Center buttons */
+    margin-top: 1rem;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 1.5rem 8%;
+    margin-top: 3rem;
+    background-color: #050505; /* Darker footer background */
+    color: var(--secondary-text-color);
+    font-size: 0.9rem;
+}
+
+
+
+
+/* Media Queries for Responsiveness */
+
+/* Large Tablets & Small Laptops (<= 1170px) */
+@media screen and (max-width: 1170px) {
+    html {
+        font-size: 15px; /* Slightly reduce base font size */
+    }
+
+    /* Hide desktop nav, show mobile button */
+    #nav_list {
+        display: none;
+    }
+
+    #mobile_btn {
+        display: block;
+    }
+
+    .home-section {
+        padding-top: 6rem; /* Adjust padding for header */
+    }
+
+    .home-content .title {
+        font-size: 3rem;
+    }
+
+    .project-gallery {
+        grid-template-rows: 40vh; /* Adjust gallery height */
+    }
+}
+
+/* Tablets (<= 992px) */
+@media screen and (max-width: 992px) {
+    section {
+        padding: 3rem 6%;
+    }
+
+    .home-section {
+        flex-direction: column; /* Stack content and banner vertically */
+        text-align: center;
+        padding-top: 8rem; /* More padding needed when stacked */
+        min-height: auto; /* Adjust min-height */
+    }
+
+    .home-content {
+        max-width: 100%;
+        align-items: center; /* Center items in column layout */
+    }
+
+    .home-banner {
+        margin-top: 2rem;
+        max-width: 350px;
+    }
+    
+    .home-banner img {
+        max-width: 300px;
+    }
+
+    .certificates-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .project-gallery {
+        inline-size: 90vw;
+        gap: var(--size-2);
+    }
+
+    .timeline {
+        padding-left: 1.5rem;
+        margin: 2rem auto;
+    }
+
+    .timeline-event::before {
+        left: -1.5rem;
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* Mobile Devices (<= 768px) */
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 14px; /* Further reduce base font size */
+    }
+
+    section {
+        padding: 2.5rem 5%;
+    }
+
+    h2.section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .home-content .title {
+        font-size: 2.5rem;
+    }
+
+    .home-content .description {
+        font-size: 1rem;
+    }
+
+    .home-banner {
+        max-width: 300px;
+    }
+    
+    .home-banner img {
+        max-width: 250px;
+    }
+
+    /* Adjust project gallery for smaller screens - maybe stack or simplify */
+    .project-gallery {
+        grid-template-columns: 1fr; /* Stack images vertically */
+        grid-auto-flow: row;
+        grid-template-rows: auto; /* Auto height for each row */
+        height: auto;
+        gap: var(--size-4);
+        inline-size: 90vw;
+    }
+
+    /* Reset column expansion logic for stacked layout */
+    .project-gallery:has(label:nth-child(n) > input:checked) {
+        --col-1: 1fr; --col-2: 1fr; --col-3: 1fr; --col-4: 1fr; --col-5: 1fr;
+    }
+    
+    .project-gallery > label {
+        height: 30vh; /* Give labels a fixed height in stacked view */
+    }
+
+    .timeline {
+        padding-left: 1rem;
+        border-left-width: 2px;
+    }
+
+    .timeline-event::before {
+        left: -1rem;
+        width: 14px;
+        height: 14px;
+        border-width: 2px;
+    }
+
+    .timeline-content {
+        padding: 1rem;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .timeline-content p {
+        font-size: 0.9rem;
+    }
+
+    .contact-form-container {
+        padding: 1.5rem;
+    }
+}
+
+/* Small Mobile Devices (<= 576px) */
+@media screen and (max-width: 576px) {
+    section {
+        padding: 2rem 4%;
+    }
+
+    .home-content .title {
+        font-size: 2.2rem;
+    }
+
+    .btn-default, .btn-submit {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .social-media-buttons a {
+        width: 40px;
+        height: 36px;
+        font-size: 1.1rem;
+    }
+
+    .certificates-grid {
+        grid-template-columns: 1fr; /* Single column */
+    }
+
+    .technical-info {
+        padding: 1.5rem;
+    }
+
+    .technical-info h3 {
+        font-size: 1.3rem;
+    }
+
+    .project-gallery > label {
+        height: 25vh; /* Adjust height for smaller screens */
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
+
+
+
+
+/* Original Contato CSS - Appended for Reversion */
+
+
+.caixa__formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 90vh; */ /* Remove fixed height to allow natural flow */
+    padding: 4rem 0; /* Add padding instead of fixed height */
+}
+
+.caixa__contato {
+    width: 90%; /* Make width responsive */
+    max-width: 600px; /* Keep max width */
+    padding: 40px;
+    background: rgba(20, 20, 20, 0.8);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(159, 18, 18, 0.886);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.caixa__contato h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #df2424;
+    font-size: 2rem; /* Use consistent sizing */
+}
+
+.caixa__contato .caixa__contato-input {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.caixa__contato .caixa__contato-input input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1rem; /* Use rem */
+    color: #fff;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.caixa__contato .caixa__contato-input label {
+    position: absolute;
+    top: 10px; /* Adjust based on input padding */
+    left: 0;
+    padding: 0; /* Remove padding */
+    font-size: 1rem; /* Use rem */
+    color: #fff;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.caixa__contato .caixa__contato-input input:focus ~ label,
+.caixa__contato .caixa__contato-input input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #df2424;
+    font-size: 0.85rem; /* Use rem */
+}
+
+/* Style the submit link as a button */
+.caixa__contato form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #ffffff;
+    font-size: 1rem; /* Use rem */
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 0.5s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+    border: 1px solid transparent; /* Add border for layout consistency */
+    cursor: pointer; /* Indicate it's clickable */
+}
+
+.caixa__contato a:hover {
+    background: #df2424;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #df2424, 0 0 25px #df2424, 0 0 50px #df2424,
+        0 0 100px #df2424;
+}
+
+/* Animation spans (keep original) */
+.caixa__contato a span {
+    position: absolute;
+    display: block;
+}
+
+.caixa__contato a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #df2424);
+    animation: animacaoBotao1 1s linear infinite;
+}
+
+@keyframes animacaoBotao1 {
+    0% { left: -100%; }
+    50%, 100% { left: 100%; }
+}
+
+.caixa__contato a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #df2424);
+    animation: animacaoBotao2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+
+@keyframes animacaoBotao2 {
+    0% { top: -100%; }
+    50%, 100% { top: 100%; }
+}
+
+.caixa__contato a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #df2424);
+    animation: animacaoBotao3 1s linear infinite;
+    animation-delay: 0.5s;
+}
+
+@keyframes animacaoBotao3 {
+    0% { right: -100%; }
+    50%, 100% { right: 100%; }
+}
+
+.caixa__contato a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #df2424);
+    animation: animacaoBotao4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+
+@keyframes animacaoBotao4 {
+    0% { bottom: -100%; }
+    50%, 100% { bottom: 100%; }
+}
+
+/* Social media buttons specific to contato section */
+.social-media-buttons-contato {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2rem; /* Add margin for spacing */
+}
+
+.social-media-buttons-contato a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 40px;
+    font-size: 1.5rem; /* Adjust size */
+    border-radius: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow .3s ease, transform 0.3s ease;
+}
+
+.social-media-buttons-contato a:hover {
+    box-shadow: 0px 0px 12px 10px rgba(222, 8, 8, 0.45);
+    transform: translateY(-2px);
+}
+
+/* Remove conflicting refactored styles */
+.contact-section,
+.contact-form-container,
+#contact-form,
+.form-group,
+.form-group label,
+.form-group input,
+.form-group textarea,
+.btn-submit,
+.contact-social-media {
+    /* Reset styles that might conflict */
+    all: unset;
+    /* Re-apply necessary display properties if needed, but originals should take over */
+}
+
+/* Ensure section padding is consistent */
+#contato {
+    padding: 4rem 8%;
+}
+
+
+
+
+
+/* Original Projetos CSS - Appended for Reversion */
+@import "https://unpkg.com/open-props" layer(design.system);
+
+@layer banner__geral {
+  #projetos fieldset { /* Target original fieldset ID */
+    grid-template-columns:
+      var(--col-1, 1fr)
+      var(--col-2, 1fr)
+      var(--col-3, 1fr)
+      var(--col-4, 1fr)
+      var(--col-5, 1fr);
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition: grid-template-columns 2s var(--ease-spring-5);
+    }
+
+    &:has(label:nth-child(1) > input:checked) {
+      --col-1: 5fr;
+      --col-2: 3fr;
+    }
+    &:has(label:nth-child(2) > input:checked) {
+      --col-1: 2fr;
+      --col-2: 5fr;
+      --col-3: 2fr;
+    }
+    &:has(label:nth-child(3) > input:checked) {
+      --col-2: 2fr;
+      --col-3: 5fr;
+      --col-4: 2fr;
+    }
+    &:has(label:nth-child(4) > input:checked) {
+      --col-3: 2fr;
+      --col-4: 5fr;
+      --col-5: 2fr;
+    }
+    &:has(label:nth-child(5) > input:checked) {
+      --col-4: 3fr;
+      --col-5: 5fr;
+    }
+
+    > label {
+      background-image: var(--_img);
+      background-size: auto 125%; /* Original size */
+      background-position: center;
+    }
+  }
+}
+
+@layer banner__geral.conteudo {
+  #projetos fieldset { /* Target original fieldset ID */
+    inline-size: 80vw;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: 50vh;
+    gap: var(--size-3);
+    border: none;
+    margin: 0 auto; /* Center the fieldset */
+
+    > label {
+      cursor: pointer;
+      border-radius: var(--radius-4);
+
+      &:focus-within {
+        outline: 1px solid #df2424;
+        outline-offset: 5px;
+      }
+
+      > input {
+        opacity: 0;
+        position: absolute; /* Ensure it doesn't affect layout */
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+#projetos #fieldset{ /* Target original fieldset ID */
+    padding: 10vh 0; /* Adjust padding */
+    /* height: 100vh; */ /* Remove fixed height */
+    margin: 0 auto; /* Center */
+}
+
+/* Original Home Banner Image Style */
+#home #banner img { /* Target original ID */
+    border-radius: 100%; /* Original round shape */
+    width: 100%; /* Let container control size */
+    max-width: 400px; /* Keep max size from refactor */
+    height: auto;
+    border: none; /* Remove border added in refactor */
+    box-shadow: none; /* Remove shadow added in refactor */
+}
+
+/* Remove conflicting refactored styles for projects */
+.projects-section,
+.project-gallery,
+.project-gallery > label,
+.project-gallery > label > input {
+    all: unset;
+}
+
+/* Ensure section padding is consistent */
+#projetos {
+    padding: 4rem 8%;
+}
+
+/* Adjust media queries for original project gallery */
+@media (max-width: 1200px){
+  #projetos #fieldset{
+    padding: 5vh 0; /* Adjust padding */
+    inline-size: 90vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+    /* Override the stacked layout for project gallery from refactor */
+    #projetos #fieldset {
+        grid-template-columns:
+          var(--col-1, 1fr)
+          var(--col-2, 1fr)
+          var(--col-3, 1fr)
+          var(--col-4, 1fr)
+          var(--col-5, 1fr);
+        grid-auto-flow: column;
+        grid-template-rows: 30vh; /* Adjust height */
+        height: auto;
+        gap: var(--size-2);
+        inline-size: 95vw;
+    }
+    
+    #projetos #fieldset > label {
+        height: auto; /* Reset height */
+    }
+    
+    /* Re-apply expansion logic if needed, or simplify for mobile */
+    #projetos #fieldset:has(label:nth-child(1) > input:checked) { --col-1: 3fr; --col-2: 1fr; --col-3: 1fr; --col-4: 1fr; --col-5: 1fr; }
+    #projetos #fieldset:has(label:nth-child(2) > input:checked) { --col-1: 1fr; --col-2: 3fr; --col-3: 1fr; --col-4: 1fr; --col-5: 1fr; }
+    #projetos #fieldset:has(label:nth-child(3) > input:checked) { --col-1: 1fr; --col-2: 1fr; --col-3: 3fr; --col-4: 1fr; --col-5: 1fr; }
+    #projetos #fieldset:has(label:nth-child(4) > input:checked) { --col-1: 1fr; --col-2: 1fr; --col-3: 1fr; --col-4: 3fr; --col-5: 1fr; }
+    #projetos #fieldset:has(label:nth-child(5) > input:checked) { --col-1: 1fr; --col-2: 1fr; --col-3: 1fr; --col-4: 1fr; --col-5: 3fr; }
+}
+
+
